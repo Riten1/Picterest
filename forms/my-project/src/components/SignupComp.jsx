@@ -50,10 +50,11 @@ const SignupComp = () => {
         {...register('email', {required: true})
         }
         />
+        
         <Input 
         label = 'Password: '
         type = 'password'
-        placeholder ='Enter your name'
+        placeholder ='Enter password'
         {...register('password', {required: true})
         }
         />

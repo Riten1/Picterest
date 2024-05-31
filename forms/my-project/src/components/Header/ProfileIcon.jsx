@@ -10,7 +10,7 @@ const ProfileIcon = () => {
   const userData = useSelector((state) => state.authen.userData)
   return (
     <Link to={`/profile/${userData.$id}`}>
-    <img className='w-10' src={icon}></img>
+    <img className='w-6 ' src={icon}></img>
     </Link>
     
   )

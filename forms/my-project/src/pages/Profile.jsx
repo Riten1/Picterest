@@ -1,8 +1,9 @@
 import React from 'react'
+import ProfileComp from '../components/ProfileComp'
 
 const Profile = () => {
   return (
-    <div>Profile</div>
+    <ProfileComp /> 
   )
 }
 
