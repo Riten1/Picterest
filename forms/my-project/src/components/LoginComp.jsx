@@ -20,6 +20,7 @@ const LoginComp = () => {
             const userData = await authentications.getCurrentAccount()
             if (userData) dispatch(login({userData}))
             navigate("/")
+          
         }
     } catch (error) {
       throw error

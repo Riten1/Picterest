@@ -14,7 +14,7 @@ import { Provider } from 'react-redux'
 import Post from './pages/AddedPost.jsx'
 import EditPost from './pages/EditPost.jsx'
 import ConfirmPost from './pages/ConfirmPost.jsx'
-
+import Profile from './pages/Profile.jsx'
 
 const router = createBrowserRouter([
   {
@@ -67,6 +67,14 @@ const router = createBrowserRouter([
         element: (
           <AuthenLayout authen={true}>
             <ConfirmPost />
+          </AuthenLayout>
+        )
+      },
+      {
+        path: '/profile/:userId',
+        element: (
+          <AuthenLayout authen={true}>
+            <Profile />
           </AuthenLayout>
         )
       }

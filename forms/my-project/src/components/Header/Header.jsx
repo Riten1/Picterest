@@ -4,10 +4,12 @@ import { useNavigate } from 'react-router-dom'
 import {useSelector} from 'react-redux'
 import Logo from '../Logo'
 import LogoutButton from './LogoutButton'
+import ProfileIcon from './ProfileIcon'
 
 
 const Header = () => {
 const registerStatus = useSelector((state) => state.authen.status)
+
 const navigate = useNavigate()
 
 const navItems = [{
@@ -57,8 +59,15 @@ const navItems = [{
 
           )} {
             registerStatus ? (
-              <li>
+              <li className='flex'>
+              
+                  <ProfileIcon />
+              
+                  
+                
+                   
                 <LogoutButton></LogoutButton>
+            
               </li>
             ): null
             }
