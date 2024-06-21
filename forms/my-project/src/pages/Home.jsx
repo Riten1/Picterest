@@ -19,7 +19,7 @@ function Home() {
     });
     // console.log(isAuthor)
     console.log(posts)
-    console.log(userData)
+    // console.log(userData)
   }, []);
   if (posts.length === 0) {
     return (

@@ -5,12 +5,11 @@ import Header from './components/Header/Header'
 import { Outlet } from 'react-router-dom'
 import { useEffect } from 'react'
 import authen from './appwrite/authen'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { login, logout } from './store/athenSlice'
 
 function App() {
 const dispatch = useDispatch()
-
 
   useEffect(() => {
     authen.getCurrentAccount().then((userData) => {
@@ -20,6 +19,7 @@ const dispatch = useDispatch()
         dispatch(logout())
       }
     })
+    console.log(loginStatus)
   })
 
 
@@ -27,6 +27,7 @@ const dispatch = useDispatch()
     <>
      <Header />
      <main>
+    
       <Outlet />
      </main>
      <Footer />

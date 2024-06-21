@@ -14,6 +14,7 @@ const Explore = () => {
         setPosts(posts.documents);
       }
     });
+    console.log(posts)
   }, []);
   return (
     <div className="w-full py-8">

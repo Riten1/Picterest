@@ -56,18 +56,7 @@ export default function PostForm({post}){
 
     }
 
-    // const slugTransform = useCallback((value) => {
-    //     if(value && typeof value === "string") return value.trim().toLowerCase().replace(/[^a-zA-Z\d\s]+/g, '-')
-    //     .replace(/\s/g, "-")
-    // }, [])
-
-    // React.useEffect(() => {
-    //     watch((value, {name}) => {
-    //         if (name === "title") {
-    //             setValue("slug", slugTransform(value.title), {shouldValidate: true})
-    //         }
-    //     }) 
-    // }, [watch, slugTransform, setValue])
+   
     return (
         <form onSubmit={handleSubmit(submit)}
         className="flex flex-wrap"
@@ -79,21 +68,7 @@ export default function PostForm({post}){
                 className="mb-4"
                 {...register("caption", {required: true})}
                 />
-                {/* <Input
-                label="Slug :"
-                placeholder="Slug"
-                className="mb-4"
-                {...register("slug", {required: true})}
-                onInput={(e) => {
-                    setValue("slug", slugTransform(e.currentTarget.value), {shouldValidate: true})
-                }}
-                />
-                <RTE
-                label="Content: "
-                name="content"
-                control={control}
-                defaultValue={getValues("content")}
-                /> */}
+               
             </div>
             <div className="1/3 px-2">
                 <Input
