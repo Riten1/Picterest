@@ -27,7 +27,6 @@ const dispatch = useDispatch()
     <>
      <Header />
      <main>
-    
       <Outlet />
      </main>
      <Footer />

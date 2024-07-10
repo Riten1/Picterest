@@ -31,11 +31,6 @@ const LoginComp = () => {
   return (
     <div >
       <div>
-        <Link to="/">
-          <Logo />
-        </Link>
-      </div>
-      <div>
         <h2>Welcome to Picterest</h2>
       </div>
       <form onSubmit={handleSubmit(submitLogin)}>

@@ -38,7 +38,7 @@ const navItems = [{
 ]
 
   return (
-    <div className='py-3 shadow bg-gray-500'>
+    <div className='p-3 shadow bg-gray-500'>
       <nav  className='flex justify-between items-center'>
         <div>
           <Link to='/'>
@@ -61,7 +61,7 @@ const navItems = [{
         </ul>
         {
             registerStatus ? (
-              <div className='flex'>
+              <div className='flex gap-x-[20px]'>
               
                   <ProfileIcon />
               
