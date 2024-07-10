@@ -12,10 +12,21 @@ const Explore = () => {
     features.getPosts().then((posts) => {
       if (posts) {
         setPosts(posts.documents);
+        console.log(posts)
       }
     });
-    console.log(posts)
+    
   }, []);
+
+  if (posts.length === 0) {
+    return (
+      <div className="w-full py-8">
+        <div className="flex flex-wrap">
+          <h1>Loading</h1>
+        </div>
+      </div>
+    );
+  }
   return (
     <div className="w-full py-8">
       <div className="flex flex-wrap">

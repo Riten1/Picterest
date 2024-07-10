@@ -19,7 +19,7 @@ const dispatch = useDispatch()
         dispatch(logout())
       }
     })
-    console.log(loginStatus)
+    
   })
 
 

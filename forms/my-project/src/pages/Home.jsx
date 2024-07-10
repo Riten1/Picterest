@@ -9,11 +9,13 @@ function Home() {
   const [posts, setPosts] = useState([]);
 
   const userData = useSelector((state) => state.authen.userData);
+  const authStatus = useSelector((state) => state.authen.status)
 
   useEffect(() => {
     features.getPosts().then((posts) => {
       if (posts) {
         setPosts(posts.documents);
+        console.log(posts)
       }
       // posts.map((post) => )
     });
@@ -21,16 +23,25 @@ function Home() {
     console.log(posts)
     // console.log(userData)
   }, []);
-  if (posts.length === 0) {
+  if (posts.length === 0 && authStatus === true) {
     return (
       <div className="w-full py-8">
         <div className="flex flex-wrap">
-          <h1>Login to view content</h1>
+          <h1>Loading</h1>
         </div>
       </div>
     );
   }
 
+  if (authStatus === false){
+    return (
+      <div className="w-full py-8">
+        <div className="flex flex-wrap">
+          <h1>Please login to view contents.</h1>
+        </div>
+      </div>
+    );
+  }
   return (
     <div>
       

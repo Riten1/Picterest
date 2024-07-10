@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Input from "./Input";
 import Button from "./Button";
 import authentications from "../appwrite/authen";
@@ -12,6 +12,7 @@ const LoginComp = () => {
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const { register, handleSubmit } = useForm();
+  
 
   const submitLogin = async (data) => {
     try {
@@ -28,7 +29,7 @@ const LoginComp = () => {
   };
 
   return (
-    <div>
+    <div >
       <div>
         <Link to="/">
           <Logo />

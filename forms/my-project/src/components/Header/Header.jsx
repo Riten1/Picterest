@@ -39,13 +39,13 @@ const navItems = [{
 
   return (
     <div className='py-3 shadow bg-gray-500'>
-      <nav  className='flex'>
+      <nav  className='flex justify-between items-center'>
         <div>
           <Link to='/'>
             <Logo />
           </Link>
         </div>
-        <ul  className='flex'>
+        <ul  className='flex gap-x-[30px]'>
           {navItems.map((item) => 
             item.active ? (
               <li key={item.name}>
@@ -57,9 +57,11 @@ const navItems = [{
             
               
 
-          )} {
+          )} 
+        </ul>
+        {
             registerStatus ? (
-              <li className='flex'>
+              <div className='flex'>
               
                   <ProfileIcon />
               
@@ -68,10 +70,9 @@ const navItems = [{
                    
                 <LogoutButton></LogoutButton>
             
-              </li>
+              </div>
             ): null
             }
-        </ul>
       </nav>
     </div>
   )
